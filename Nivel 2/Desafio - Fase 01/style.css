@@ -1,23 +1,22 @@
 body {
   font-family: "Open Sans", sans-serif;
-  text-align: end;
+  text-align: center;
   margin: 0;
+  height: 100vh;
 }
+
 
 #hero {
     width: 592px;
-    margin: 72px;
-}
-
-img {
-    margin: 100px;
-}
+    margin: 72px auto;
+} 
 
 h1 {
   font-family: "Inter", sans-serif;
   font-size: 49px;
   line-height: 56px;
   font-weight: normal;
+  margin-bottom:32px;
 }
 
 h1 span {
@@ -29,6 +28,7 @@ h1 span {
 span, a {
   color: #ff9900;
 }
+
 
 p, #footer {
   color: #7d7987;
@@ -43,14 +43,13 @@ p, #footer {
 .line {
     width: 568px;
     height: 0;
-
-    margin: 0 8px;
+    margin: 0 auto 8px;
 
     border: 1px solid #ECEFF2;
 }
 
 #balls {
     position: fixed;
-    top: 0;
+    bottom: 0;
     right: 0;
 }
