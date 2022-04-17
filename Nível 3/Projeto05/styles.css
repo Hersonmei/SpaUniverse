@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --ff-heading:'Epilogue', sans-serif;
+    
+    --bg-primary: #28293E;
+    --fc-primary: #FFFFFF;
+    --fc-secondary: #BBB3E5;
+    font-size: 62.5%;
+}
+
+body{
+    font-family: var(--ff-heading);
+    background-color: var(--bg-primary);
+    color: var(--fc-primary);
+    font-size: 1.6rem;
+}
+
+.container{
+    width: 33rem;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+header{
+    text-align: center;
+    margin: 10rem 0 8rem;
+}
+
+header p{
+    color: var(--fc-secondary);
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 3.2rem;
+    
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    margin-bottom: 1.7rem;
+}
+
+header h1{
+    font-weight: 800;
+    font-size: 4.0rem;
+    line-height: 4.8rem;
+}
+
+main{
+    display: grid;
+    gap: 3.2rem;
+}
+
+.card{
+    position: relative;
+}
+
+.card img{
+    height: 41.6rem;
+    object-fit: cover;
+}
+
+.card h2{
+    position: absolute;
+    bottom: 5.2rem;
+    left: 2.8rem;
+    font-weight: 800;
+    font-size: 4.0rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.3rem;
+
+}
+
+.card span{
+    width: fit-content;
+    height: 3.8rem;
+    background-color: var(--fc-primary);
+    border-radius: 2rem;
+    color: #090039;
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 0 1.5rem;
+    display: inline-flex;
+    align-items: center;
+}
+
