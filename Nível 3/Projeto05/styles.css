@@ -64,6 +64,13 @@ main{
 .card img{
     height: 41.6rem;
     object-fit: cover;
+    border-radius: 6px;
+    transition: all 200ms;
+}
+
+.card img:hover{
+    transform: scale(1.1);
+    opacity: 0.4;
 }
 
 .card h2{
@@ -91,3 +98,24 @@ main{
     align-items: center;
 }
 
+header{
+    animation: topdown 700ms;
+
+}
+
+@keyframes topdown{
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes downtop{
+    
+}
