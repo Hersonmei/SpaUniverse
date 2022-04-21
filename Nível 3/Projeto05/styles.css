@@ -21,8 +21,51 @@ body{
 }
 
 .container{
-    width: 33rem;
+    max-width: 33rem;
     margin: 0 auto;
+}
+
+@media (min-width: 700px){
+    header h1{
+        font-size: 5.6rem;
+    }
+
+    .container{
+        max-width: 117rem;
+        padding: 0 5rem;
+    }
+
+    main{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 930px){
+   
+
+    
+
+    main{
+        grid-template-areas: 
+        "A B B"
+        "C C D";
+    }
+
+    main div:nth-child(1){
+        grid-area: A;
+    }
+
+    main div:nth-child(2){
+        grid-area: B;
+    }
+
+    main div:nth-child(3){
+        grid-area: C;
+    }
+
+    main div:nth-child(4){
+        grid-area: D;
+    }
 }
 
 img {
@@ -32,6 +75,8 @@ img {
 header{
     text-align: center;
     margin: 10rem 0 8rem;
+
+    animation: topdown 700ms;
 }
 
 header p{
@@ -48,13 +93,15 @@ header p{
 
 header h1{
     font-weight: 800;
-    font-size: 4.0rem;
     line-height: 4.8rem;
 }
 
 main{
     display: grid;
     gap: 3.2rem;
+    padding-bottom: 10rem;
+
+    animation: downtop 700ms 350ms;
 }
 
 .card{
@@ -66,6 +113,7 @@ main{
     object-fit: cover;
     border-radius: 6px;
     transition: all 200ms;
+    filter: brightness(0.6);
 }
 
 .card img:hover{
@@ -98,24 +146,27 @@ main{
     align-items: center;
 }
 
-header{
-    animation: topdown 700ms;
-
-}
-
 @keyframes topdown{
     0% {
-        opacity: 0;
+        opacity: 1;
         transform: translateY(-15px);
     }
 
 
     100%{
-        opacity: 1;
+        opacity: 0;
         transform: translateY(0);
     }
 }
 
 @keyframes downtop{
+    0%{
+        opacity: 0;
+        transform: translateY(15px);
+    }
     
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
