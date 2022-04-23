@@ -1,5 +1,7 @@
 # Explorer
 
+<img src="https://www.rocketseat.com.br/_next/image?url=%2Fassets%2Flogos%2Frocketseat.svg&w=256&q=100" height="32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="https://www.rocketseat.com.br/_next/image?url=%2Fassets%2Flogos%2Fexplorer.svg&w=256&q=75" height="35">&nbsp;
+
 # Meus projetos
 
 ![last commit](https://img.shields.io/github/last-commit/Hersonmei/Explorer?color=2c5a6c 'last commit') &nbsp; ![repo size](https://img.shields.io/github/repo-size/Hersonmei/Explorer?color=2c5a6c 'repo size') &nbsp; ![languages](https://img.shields.io/github/languages/count/Hersonmei/Explorer?color=2c5a6c 'languages')
