@@ -84,8 +84,7 @@ form{
     border-radius: 20px 20px 0px 0px;
 
     width: 75rem;
-    height: 108.4rem;
-
+    height: 112.4rem;
     padding: 6.4rem;
 
     display: flex;
@@ -95,6 +94,10 @@ form{
 
 form fieldset{
     border: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
 }
 
 form legend{
@@ -106,6 +109,10 @@ form legend{
     padding-bottom: 1.6rem;
     margin-bottom: 3.2rem;
 }
+
+/* Aqui tbm foi outra dúvida que precisei consultar, criei um novo container (names), apliquei flex e gap nele. 
+
+Após isso, dentro do input-wrapper apliquei um novo flex e o width de 50%. Lembrar que esse input-wrapper é opai da Label e do input.*/
 
 .names{
     display: flex;
@@ -129,13 +136,15 @@ form legend{
 
     border: 1px solid #E6E6F0;
     border-radius: 8px;
+
+    padding: 0 2.4rem;
 }
 
-.date-time-wrapper{
+.col-3{
     margin-top: 1rem;
 }
 
-.date-time-wrapper + h2{
+.col-3 + h2{
     margin-top: 1.6rem;
 }
 
@@ -148,19 +157,26 @@ form legend{
     color: #C1BCCC;
 }
 
-.date-time-wrapper{
+/* Aqui consegui resolver uma grande dúvida, coloquei os três itens dentro do conteiner col-3. Apliquei o display-flex e dei gap. 
+
+Após isso, peguei o primeiro item que que é o da data e dei um width de 100%.
+
+Depois fui em col-3 time, que são os dois quadradinhos da hora e apliquei novamente o display flex e dei o gap
+
+Para resolver aquele tamanho dos inputs que não estava fincando legal, era só ir lá na formatação do input, e add o padding: 0 2.4rem, ele ajeita o padding dentro do input e tbm deixou que minha formatação ficasse legal.*/
+
+.col-3{
     display: flex;
     gap: 3.2rem;
 }
 
-.date-time-wrapper >
-.input-wrapper:first-child{
-    width: 60%;
+.col-3 > div:nth-child(1){
+   width: 100%;
 }
 
-.time{
+.col-3 .time{
     display: flex;
-    gap: 10px;
+    gap: 1rem;
 }
 
 footer{
@@ -189,4 +205,8 @@ footer{
     color: var(--fc-white);
     font-size: 20px;
     line-height: 26px;
+}
+
+.btn:hover{
+    background: #de6e85;
 }
