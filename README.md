@@ -7,12 +7,6 @@
 ![last commit](https://img.shields.io/github/last-commit/Hersonmei/Explorer?color=2c5a6c 'last commit') &nbsp; ![repo size](https://img.shields.io/github/repo-size/Hersonmei/Explorer?color=2c5a6c 'repo size') &nbsp; ![languages](https://img.shields.io/github/languages/count/Hersonmei/Explorer?color=2c5a6c 'languages')
 ---
 
----
-<table align="right">
- <tr><td colspan="2" align="center"><strong>📈 Status and stacks practised</strong></td></tr>
-    <tr align="center"><td>🚧 In progress</td><td>🧰 Stacks </td></tr>
-    <tr align="center"><td>███▁▁▁▁▁▁▁ &nbsp;25%</td><td><img src="https://img.shields.io/badge/CSS3-381480?style=flat&logo=css3" alt="css3 Badge" height="22">&nbsp; <img src="https://img.shields.io/badge/HTML5-381480?style=flat&logo=html5" alt="html5 Badge" height="22"></td></tr></table>
-
 ### 📌 Índice
 
 #### Nível 2
