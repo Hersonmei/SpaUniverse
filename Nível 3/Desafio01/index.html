@@ -25,30 +25,30 @@
         </header>
       </div>
 
-      <form>
+      <form id="my-form">
         <fieldset>
           <legend>Informações pessoais</legend>
 
           <div class="names">
             <div class="input-wrapper">
               <label for="name">Nome</label>
-              <input type="text" name="name" id="name"/>
+              <input required type="text" name="name" id="name"/>
             </div>
   
             <div class="input-wrapper">
               <label for="last-name">Sobrenome</label>
-              <input type="text" name="last-name" id="last-name"/>
+              <input required type="text" name="last-name" id="last-name"/>
             </div>
           </div>
           
           <div class="input-wrapper">
             <label for="email">Email <span>(digite um email válido)</span></label>
-            <input type="email" name="email" id="email" />
+            <input required type="email" name="email" id="email" />
           </div>
 
           <div class="input-wrapper">
             <label for="password">Senha <span>(mínimo de 6 caracteres)</span></label>
-            <input type="password" name="password" id="password"/>
+            <input required type="password" name="password" id="password"/>
           </div>
 
         </fieldset>
@@ -114,7 +114,9 @@
       </form>
 
       <footer>
-        <div class="btn">Salvar</div>
+        <button class="btn" form="my-form">
+          Salvar
+        </button>
       </footer>
     </div>
   </body>
