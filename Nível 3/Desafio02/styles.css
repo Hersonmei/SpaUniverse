@@ -197,7 +197,7 @@ header p{
     font-size: 2rem;
     line-height: 2.6rem;
 
-    background: #F67669;
+    background: var(--color-button);
     border-radius: 8px;
 
     width: 100%;
@@ -206,4 +206,8 @@ header p{
     border: none;
 
     margin-top: 6rem;
+}
+
+.btn:hover{
+    background: #f43722;
 }
