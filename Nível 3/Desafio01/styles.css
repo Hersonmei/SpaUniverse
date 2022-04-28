@@ -201,6 +201,7 @@ footer{
 
     background: #FF5374;
     border-radius: 20px;
+    border: none;
 
     font-family: var(--ff-Staatliches);
     color: var(--fc-white);
