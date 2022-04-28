@@ -181,7 +181,7 @@ header p{
     gap: 3.2rem;
 }
 
-.date-time-wrapper > div:first-child{
+.date-time-wrapper > .input-wrapper{
     width: 100%;
 }
 
