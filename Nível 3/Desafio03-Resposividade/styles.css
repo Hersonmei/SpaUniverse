@@ -26,7 +26,7 @@ body{
     padding: 3.2rem 0 6rem;
 }
 
-body, header,  main, h1, h2, main .image-content{
+.content , header,  main, h1, h2, main .image-content{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -96,11 +96,14 @@ main .image-content {
 
 main .image-content .image-wrapper img{
     animation: image 1s;
+
+    border-radius: 20px;
 }
 
 
 .image-wrapper{
     position: relative;
+    
 }
 
 main .image-content .image-wrapper h2 {
@@ -147,4 +150,70 @@ main .image-content .image-wrapper h2 {
         transform: translateY(0px);
     }
 
+}
+
+footer{
+    display: none;
+}
+
+@media (min-width: 900px){
+    body{
+        padding: 0;
+    }
+    body::before {
+        display: none;
+    }
+    
+    .content{
+        display: grid;
+        grid-template-columns: minmax(377px, 600px)  1fr;
+    }
+
+    header{
+        background-color: var(--color-header);
+        height: 100vh;
+
+        display: grid;
+        grid-template-areas: 
+        "logo"
+        "title"
+        "parag"
+        "parag";
+    }
+
+    .logo {
+        width: 300px;
+        height: 300px;
+        
+        grid-area: logo;
+    }
+
+    header h1{
+        font-size: 4.8rem;
+        line-height: 3.4rem;
+
+        height: 7rem;
+
+        grid-area: title;
+    }
+    
+    main .loren{
+        grid-area: parag;
+    }
+
+
+    main .image-content{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+   
+
+
+
+
+
+/* 
+    footer{
+        display: block;
+    } */
 }
