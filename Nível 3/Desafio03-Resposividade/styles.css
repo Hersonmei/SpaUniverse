@@ -222,25 +222,18 @@ footer{
         padding: 5rem 4rem;
     }
 
-
-
     main{
         margin: 0;
 
         grid-area: images;
     }
-    
-    
-
 
     main .image-content{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 250px 165px 250px;
+        grid-template-rows: 1fr 1fr 1fr;
         row-gap: 32px;
 
-
-        height: 100vh;
     }
 
     .image-content{
@@ -273,8 +266,8 @@ footer{
 
 
 
-/* 
+
     footer{
         display: block;
-    } */
+    }
 }
