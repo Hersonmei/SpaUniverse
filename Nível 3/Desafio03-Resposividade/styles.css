@@ -145,7 +145,7 @@ main .image-content .image-wrapper h2 {
     }
 }
 
-@keyframes image{
+/* @keyframes image{
     0%{
         opacity: 0;
         transform: translateY(5rem);
@@ -153,7 +153,7 @@ main .image-content .image-wrapper h2 {
 
     100%{
         transform: translateY(0px);
-    }
+    } */
 
 }
 
@@ -161,7 +161,8 @@ footer{
     display: none;
 }
 
-@media (min-width: 900px){
+
+@media (min-width: 700px){
     body{
         padding: 0;
     }
@@ -169,21 +170,14 @@ footer{
         display: none;
     }
 
-    /* Para conseguir organizar os elementos de uma melhor forma, primeiro gerei as colunas, 1 primeira com a largura dada no figma que é o tamanho da coluna cinza a outra como 1fr. Fiz o mesmo procedimento para as linhas, a primeira menor com a posição onde ficará o Header e a segunda o 1fr onde ficará o p e o resto da página.
-    
-    Para conseguir aplicar o grid-area abaixo, foi preciso retirar o o p de dentro da main e colocá-lo entre o header e o p.
-    
-    */
-    
     .content{
         display: grid;
-        grid-template-columns: minmax(377px, 600px)  1fr;
+        grid-template-columns: 370px  1fr;
         grid-template-rows: 380px 1fr;
         grid-template-areas:
         "header images"
         "p      images";
 
-        height: 100vh;
     }
 
     header{
@@ -191,15 +185,17 @@ footer{
         
         
         grid-area: header;
+        
+        height: 100vh;
     }
 
     .logo {
-        width: 300px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
     }
 
     header h1{
-        font-size: 7rem;
+        font-size: 5rem;
         line-height: 3.4rem;
 
         padding: 6rem 0;
@@ -213,19 +209,114 @@ footer{
         background-color: var(--color-header);
         color: var(--color-h1);
 
-        font-size: 2.4rem;
-        line-height: 3rem;
+        font-size: 1.7rem;
+        line-height: 2.5rem;
 
         max-width: 100%;
         height: 100%;
         margin: 0;
-        padding: 5rem 4rem;
+        padding: 6rem 4rem;
     }
 
     main{
         margin: 0;
 
         grid-area: images;
+    }
+
+    main .image-content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "a b "
+        "c d"
+        "e f";
+
+    }
+
+    .sorv1{
+        grid-area: a;
+    }
+
+    .sorv2{
+        grid-area: c;
+    }
+
+    .sorv3{
+        grid-area: b;
+    }
+
+    .sorv4{
+        grid-area: d;
+    }
+
+    .sorv5{
+        grid-area: f;
+    }
+
+    .sorv6{
+        grid-area: e;
+    }
+
+    footer{
+        display: block;
+
+        font-family: var(--ff-robot);
+        font-size: 1.4rem;
+        line-height: 2.8rem;
+
+        color: var(--color-h2);
+    }
+
+    .image-wrapper:hover{
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+
+    .image-wrapper{
+        transition: all .7s;
+    }
+
+    /* Aqui, somente aplicando o transition eu consigo suavizar tanto o aumento do hover quando a volta para o tamanho norma. */
+   
+    
+}
+
+@media (min-width: 1460px){
+    
+    /* Para conseguir organizar os elementos de uma melhor forma, primeiro gerei as colunas, 1 primeira com a largura dada no figma que é o tamanho da coluna cinza a outra como 1fr. Fiz o mesmo procedimento para as linhas, a primeira menor com a posição onde ficará o Header e a segunda o 1fr onde ficará o p e o resto da página.
+    
+    Para conseguir aplicar o grid-area abaixo, foi preciso retirar o o p de dentro da main e colocá-lo entre o header e o p.
+    
+    */
+    
+    .content{
+        display: grid;
+        grid-template-columns: 470px  1fr;
+        grid-template-rows: 380px 1fr;
+        grid-template-areas:
+        "header images"
+        "p      images";
+
+       
+
+        height: 100vh;
+    }
+
+
+    .logo {
+        width: 300px;
+        height: 300px;
+    }
+
+    header h1{
+        font-size: 6rem;
+        padding: 6rem 0;
+
+    }
+
+    .texto{
+        padding: 5rem 4rem;
     }
 
     main .image-content{
@@ -262,9 +353,16 @@ footer{
         grid-area: e;
     }
 
-
-
     footer{
         display: block;
+
+        font-family: var(--ff-robot);
+        font-size: 1.4rem;
+        line-height: 2.8rem;
+
+        color: var(--color-h2);
     }
+
+    
+
 }
