@@ -74,8 +74,6 @@ header img{
 
 main{
     margin-top: 6.5rem;
-
-    padding: 0 4rem;
     
     gap: 6rem;
 }
@@ -145,7 +143,7 @@ main .image-content .image-wrapper h2 {
     }
 }
 
-/* @keyframes image{
+@keyframes image{
     0%{
         opacity: 0;
         transform: translateY(5rem);
@@ -153,8 +151,8 @@ main .image-content .image-wrapper h2 {
 
     100%{
         transform: translateY(0px);
-    } */
-
+    
+    }
 }
 
 footer{
@@ -162,9 +160,43 @@ footer{
 }
 
 
-@media (min-width: 700px){
+/* First Media */
+
+@media (min-width: 500px){
+
+    .image-content{
+        width: 45rem;
+    }
+
+    .image-wrapper{
+        width: 100%;
+    }
+
+    .image-wrapper img{
+        width: 100%;
+    }
+
+    .image-wrapper:hover{
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+
+    .image-wrapper{
+        transition: all .7s;
+    }
+
+    /* Aqui, somente aplicando o transition eu consigo suavizar tanto o aumento do hover quando a volta para o tamanho norma. */
+}
+
+
+
+/* Second Media */
+
+@media (min-width: 1070px){
     body{
         padding: 0;
+
+        min-height: 100vh;
     }
     body::before {
         display: none;
@@ -178,6 +210,7 @@ footer{
         "header images"
         "p      images";
 
+        margin-top: 4rem;
     }
 
     header{
@@ -220,8 +253,11 @@ footer{
 
     main{
         margin: 0;
+        padding: 0 4rem;
 
         grid-area: images;
+
+        
     }
 
     main .image-content{
@@ -232,6 +268,7 @@ footer{
         "c d"
         "e f";
 
+        width: auto;
     }
 
     .sorv1{
@@ -267,20 +304,11 @@ footer{
 
         color: var(--color-h2);
     }
-
-    .image-wrapper:hover{
-        transform: scale(1.1);
-        opacity: 0.8;
-    }
-
-    .image-wrapper{
-        transition: all .7s;
-    }
-
-    /* Aqui, somente aplicando o transition eu consigo suavizar tanto o aumento do hover quando a volta para o tamanho norma. */
    
     
 }
+
+/* Last Media */
 
 @media (min-width: 1460px){
     
