@@ -1,14 +1,20 @@
-let nome = prompt("Digite o nome do aluno: ")
-let not1 = prompt("Primeira nota: ")
-let not2 = prompt("Segunda nota: ")
-let not3 = prompt("Terceira nota: ")
+/*
 
-let average = ((Number(not1) + Number(not2) + Number(not3)) / 3)
+  Faça um programa que tenha um menu e apresente a seguinte mensagem:
+  
+  Olá usuário! Digite o número da opção desejada
 
-average = average.toFixed(2)
+    1. Cadastrar um item na lista
+    2. Mostrar itens cadastrados
+    3. Sair do programa
+  
+  --- 
+  O programa deverá capturar o número digitado pelo usuário e mostrar o seguintes cenários:
 
-if(average < 7){
-    alert(`Você reprovou! Torcemos que se saia melhor na próxima. Nota final ${average}`)
-} else(
-    alert(`Parabéns ${nome}! Você foi aprovado com nota final ${average}!`)
-)
+  Caso o usuário digite 1, ele poderá cadastrar um item em uma lista
+  Caso o usuário digite 2, ele poderá ver os itens cadastrados
+    Se não houver nenhum item cadastrado, mostrar a mensagem: 
+      "Não existem itens cadastrados"
+  Caso o usuário digite 3, a aplicação deverá ser encerrada.
+
+*/
