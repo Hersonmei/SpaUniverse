@@ -1,7 +1,6 @@
-//default import
-import resetControls from "./controls.js"
-//named import *Preciso usar os mesmos nomes que eu exportei lá no módulo.
-import {countdown, resetTimer} from "./timer.js"
+// default import
+import Controls from "./controls.js"
+import Timer from "./timer.js"
 
 const buttonPlay = document.querySelector('.play')
 const buttonPause = document.querySelector('.pause')
@@ -11,29 +10,37 @@ const buttonSoundOn = document.querySelector('.sound-on')
 const buttonSoundOff = document.querySelector('.sound-off')
 const minutesDisplay = document.querySelector('.minutes')
 const secondsDisplay = document.querySelector('.seconds')
-let timerTimeOut
 let minutes = Number(minutesDisplay.textContent)
+let timerTimeOut
 
+const timer = Timer({
+  minutesDisplay, 
+  secondsDisplay, 
+  timerTimeOut, 
+  resetControls,
+})
+
+const controls = Controls({
+  buttonPause,
+  buttonPlay,
+  buttonSet,
+  buttonStop
+})
 
 buttonPlay.addEventListener('click', function() {
-  buttonPlay.classList.add('hide')
-  buttonPause.classList.remove('hide')
-  buttonSet.classList.add('hide')
-  buttonStop.classList.remove('hide')
-
-  countdown()
+  controls.play()
+  timer.countdown()
 
 })
 
 buttonPause.addEventListener('click', function() {
-  buttonPause.classList.add('hide')
-  buttonPlay.classList.remove('hide')
-  clearTimeout(timerTimeOut)   //Fazer ANOTAÇÃO!
+  controls.pause()
+  clearTimeout(timerTimeOut)
 })
 
 buttonStop.addEventListener('click', function() {
-    resetControls()
-    resetTimer()
+  controls.reset()
+  timer.reset()
 })
 
 buttonSoundOff.addEventListener('click', function() {
@@ -47,12 +54,13 @@ buttonSoundOn.addEventListener('click', function() {
 })
 
 buttonSet.addEventListener('click', function() {
- let newMinutes = prompt('Quantos minutos?')
-  if (!newMinutes){
-    resetTimer()
+  let newMinutes = controls.getMinutes()
+
+  if(!newMinutes){
+    timer.reset
     return
   }
 
   minutes = newMinutes
-  updateTimerDisplay(minutes, 0)
+  timer.updateDisplay(minutes, 0)
 })
