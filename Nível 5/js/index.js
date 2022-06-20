@@ -1,24 +1,18 @@
 // default import
 import Controls from "./controls.js"
 import Timer from "./timer.js"
-
-const buttonPlay = document.querySelector('.play')
-const buttonPause = document.querySelector('.pause')
-const buttonStop = document.querySelector('.stop')
-const buttonSet = document.querySelector('.set')
-const buttonSoundOn = document.querySelector('.sound-on')
-const buttonSoundOff = document.querySelector('.sound-off')
-const minutesDisplay = document.querySelector('.minutes')
-const secondsDisplay = document.querySelector('.seconds')
-let minutes = Number(minutesDisplay.textContent)
-let timerTimeOut
-
-const timer = Timer({
-  minutesDisplay, 
-  secondsDisplay, 
-  timerTimeOut, 
-  resetControls,
-})
+import Sounds from "./sounds.js"
+import Events from "./events.js"
+import {
+  buttonPause,
+  buttonPlay,
+  buttonSet,
+  buttonSoundOff,
+  buttonSoundOn,
+  secondsDisplay,
+  minutesDisplay,
+  buttonStop
+} from "./elements.js"
 
 const controls = Controls({
   buttonPause,
@@ -27,40 +21,23 @@ const controls = Controls({
   buttonStop
 })
 
-buttonPlay.addEventListener('click', function() {
-  controls.play()
-  timer.countdown()
-
+const timer = Timer({
+  minutesDisplay, 
+  secondsDisplay, 
+  resetControls: controls.reset
 })
 
-buttonPause.addEventListener('click', function() {
-  controls.pause()
-  clearTimeout(timerTimeOut)
+const sound = Sounds()
+
+const events = Events({
+  buttonPause,
+  buttonPlay,
+  buttonSet,
+  buttonStop,
+  buttonSoundOff,
+  buttonSoundOn,
+  sound,
+  timer,
+  controls
 })
 
-buttonStop.addEventListener('click', function() {
-  controls.reset()
-  timer.reset()
-})
-
-buttonSoundOff.addEventListener('click', function() {
-  buttonSoundOn.classList.remove('hide')
-  buttonSoundOff.classList.add('hide')
-})
-
-buttonSoundOn.addEventListener('click', function() {
-  buttonSoundOn.classList.add('hide')
-  buttonSoundOff.classList.remove('hide')
-})
-
-buttonSet.addEventListener('click', function() {
-  let newMinutes = controls.getMinutes()
-
-  if(!newMinutes){
-    timer.reset
-    return
-  }
-
-  minutes = newMinutes
-  timer.updateDisplay(minutes, 0)
-})
