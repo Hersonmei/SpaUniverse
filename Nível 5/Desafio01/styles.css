@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #323238;
+
+    font-size: 62.5%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    gap: 19rem;
+
+    color: var(--primary-color);
+}
+
+span{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12rem;
+}
+
+.controls{
+    display: flex;
+    gap: 4rem;
+
+    margin-top: 2rem;
+}
+
+.controls button{
+    background: none;
+    border: none;
+
+    cursor: pointer;
+}
+
+.panel{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+
+    
+}
