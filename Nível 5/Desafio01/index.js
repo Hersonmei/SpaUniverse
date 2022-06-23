@@ -5,15 +5,24 @@ const btnVolumeUp = document.querySelector('.volumeUp')
 const btnVolumeDown = document.querySelector('.volumeDown')
 const minutes = document.querySelector(".minutes").textContent
 
-console.log(minutes);
+const audioForest = new Audio("b")
 
-btnPanel.forEach(btn => btn.addEventListener('click', function(){
-    removeClassActive()
-    btn.classList.toggle("active")
-}))
+const audioRain = new Audio()
+
+const audioCafeteria = new Audio()
+
+const audioFireplace = new Audio()
 
 function removeClassActive(){
     btnPanel.forEach(btn => 
         btn.classList.remove('active')
     )
 }
+
+btnPanel.forEach(btn => btn.addEventListener('click', function(){
+    removeClassActive()
+    btn.classList.toggle("active")
+    audioForest.play()
+
+}))
+
