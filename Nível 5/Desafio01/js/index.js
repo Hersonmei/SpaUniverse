@@ -1,26 +1,17 @@
 import { Events } from "./events.js"
-import { Sounds } from "./sounds.js"
 
+const timer = document.querySelector('.timer')
 const btnPanel = document.querySelectorAll('.btn')
 const btnPlay = document.querySelector('.play')
 const btnPause = document.querySelector('.pause')
-const btnVolumeUp = document.querySelector('.volumeUp')
-const btnVolumeDown = document.querySelector('.volumeDown')
-const minutes = document.querySelector(".minutes").textContent
-
-const btnForest = document.querySelector('.forest')
-const btnRain = document.querySelector('.rain')
-const btnCafeteria = document.querySelector('.cafeteria')
-const btnFireplace = document.querySelector('.fireplace')
-
-const sounds = Sounds()
+const btnTimeUp = document.querySelector('.volumeUp')
+const btnTimeDown = document.querySelector('.volumeDown')
+let minutes = Number(document.querySelector(".minutes").textContent)
+let seconds = Number(document.querySelector('.seconds').textContent)
 
 Events({
-    btnCafeteria,
-    btnFireplace,
-    btnForest,
-    btnRain,
-    btnPanel
+    btnPanel,
+    removeClassActive
 })
 
 function removeClassActive(){
@@ -29,8 +20,50 @@ function removeClassActive(){
     )
 }
 
+function addClassPlay(){
+    timer.classList.add('playActive')
+}
 
+let timeInterval = 0
 
+btnPlay.addEventListener("click", () => {
 
+    if(!(timer.classList.contains('playActive'))){
+        timeInterval = setInterval(minutesSeconds, 1000)
+        addClassPlay()
+    }
+    
+    function minutesSeconds(){
+        if((seconds == 0 && minutes == 0)){
+            clearInterval(timer)
+            return
+        }
+        
+        if(seconds == 0){
+            minutes = --minutes
+            document.querySelector('.minutes').textContent = String(minutes).padStart(2, 0)
+            seconds = 3
+        } 
 
+        if (seconds != 0){
+            seconds = --seconds
+            document.querySelector('.seconds').textContent = String(seconds).padStart(2, 0)   
+        }
+    }
+})
 
+btnPause.addEventListener("click", () =>{
+    clearInterval(timer)
+})
+
+btnTimeUp.addEventListener("click", () => {
+    minutes = minutes + 5
+    document.querySelector('.minutes').textContent = String(minutes).padStart(2, 0)
+})
+
+btnTimeDown.addEventListener("click", () => {
+    if(minutes >= 5){
+        minutes = minutes - 5
+        document.querySelector('.minutes').textContent = String(minutes).padStart(2, 0)
+    }
+})
