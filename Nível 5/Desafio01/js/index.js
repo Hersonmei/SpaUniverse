@@ -1,7 +1,13 @@
 import { Events } from "./events.js"
 
-const timer = document.querySelector('.timer')
+const whiteMode = document.querySelector('.btn-white')
+const darkMode = document.querySelector('.btn-dark')
+
+const body = document.querySelector('body')
+const svg = document.querySelectorAll('svg')
 const btnPanel = document.querySelectorAll('.btn')
+
+const timer = document.querySelector('.timer')
 const btnPlay = document.querySelector('.play')
 const btnPause = document.querySelector('.pause')
 const btnTimeUp = document.querySelector('.volumeUp')
@@ -35,7 +41,7 @@ btnPlay.addEventListener("click", () => {
     
     function minutesSeconds(){
         if((seconds == 0 && minutes == 0)){
-            clearInterval(timer)
+            clearInterval(timeInterval)
             return
         }
         
@@ -53,7 +59,8 @@ btnPlay.addEventListener("click", () => {
 })
 
 btnPause.addEventListener("click", () =>{
-    clearInterval(timer)
+    clearInterval(timeInterval)
+    timer.classList.remove('playActive')
 })
 
 btnTimeUp.addEventListener("click", () => {
@@ -66,4 +73,12 @@ btnTimeDown.addEventListener("click", () => {
         minutes = minutes - 5
         document.querySelector('.minutes').textContent = String(minutes).padStart(2, 0)
     }
+})
+
+whiteMode.addEventListener('click', () => {
+    body.classList.add('dark')
+    darkMode.classList.add('dark')
+    svg.classList.add('dark')
+    btnPanel.classList.add('dark')
+    
 })
