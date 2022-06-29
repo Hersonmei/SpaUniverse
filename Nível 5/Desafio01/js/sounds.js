@@ -4,6 +4,7 @@ export function Sounds(){
     const audioCafeteria = new Audio("https://github.com/Hersonmei/Explorer/blob/main/N%C3%ADvel%205/Desafio01/audio/Cafeteria.wav?raw=true")
     const audioFireplace = new Audio("https://github.com/Hersonmei/Explorer/blob/main/N%C3%ADvel%205/Desafio01/audio/Lareira.wav?raw=true")
 
+    
     function cancelAudio(){
         audioForest.pause()
         audioRain.pause()

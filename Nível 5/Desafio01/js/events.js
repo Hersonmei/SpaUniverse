@@ -5,6 +5,11 @@ const btnRain = document.querySelector('.rain')
 const btnCafeteria = document.querySelector('.cafeteria')
 const btnFireplace = document.querySelector('.fireplace')
 
+let volumeForest = document.querySelector('.volume-control.forest')
+// let volumeRain = document.querySelector('volume-control.rain')
+// let volumeCafeteria = document.querySelector('volume-control.cafeteria')
+// let volumeFire = document.querySelector('volume-control.fire')
+
 const sounds = Sounds()
 
 export function Events({
@@ -32,6 +37,12 @@ export function Events({
 
     btnFireplace.addEventListener('click', () => {
         sounds.audioFireplace.play()
+
+    volumeForest.addEventListener('change', () => {
+        console.log(volumeForest.value);
+        // sounds.audioForest.volume = 
+    })
 })
 }
+
 

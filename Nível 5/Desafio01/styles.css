@@ -69,6 +69,10 @@ span{
     display: inline;
 }
 
+.btn-white.dark{
+    display: none;
+}
+
 .panel{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -88,7 +92,12 @@ span{
     background-color: var(--bg-panel-dark-mode);
 }
 
-.btn.active{
+input{
+    width: 100px;
+    margin-top: 30px;
+}
+
+.btn.active, .btn.dark.active{
     background-color: #02799D;
     fill: #FFFFFF;
 }
@@ -101,3 +110,4 @@ body.dark{
 svg.dark{
     fill: #C4C4CC;
 } 
+

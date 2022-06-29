@@ -15,6 +15,8 @@ const btnTimeDown = document.querySelector('.volumeDown')
 let minutes = Number(document.querySelector(".minutes").textContent)
 let seconds = Number(document.querySelector('.seconds').textContent)
 
+
+
 Events({
     btnPanel,
     removeClassActive
@@ -78,7 +80,17 @@ btnTimeDown.addEventListener("click", () => {
 whiteMode.addEventListener('click', () => {
     body.classList.add('dark')
     darkMode.classList.add('dark')
-    svg.classList.add('dark')
-    btnPanel.classList.add('dark')
-    
+    whiteMode.classList.add('dark')
+    svg.forEach(item => item.classList.add('dark'))
+    btnPanel.forEach(item => item.classList.add('dark'))
 })
+
+darkMode.addEventListener('click', () => {
+    body.classList.remove('dark')
+    darkMode.classList.remove('dark')
+    whiteMode.classList.remove('dark')
+    svg.forEach(item => item.classList.remove('dark'))
+    btnPanel.forEach(item => item.classList.remove('dark'))
+})
+
+
