@@ -1,7 +1,7 @@
 # Curso Explorer - Rocketseat
 
-<img src="[https://www.rocketseat.com.br/_next/image?url=%2Fassets%2Flogos%2Frocketseat.svg&w=256&q=100](https://rocketseat.gupy.io/)" height="32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-<img src="[https://www.rocketseat.com.br/_next/image?url=%2Fassets%2Flogos%2Fexplorer.svg&w=256&q=75](https://media-exp1.licdn.com/dms/image/C4D22AQEM_Ey9bZPF2A/feedshare-shrink_800/0/1648577784510?e=1657152000&v=beta&t=QMkUo0Vw-w9SU0XybCI9QrR3pSznPGtzRor9yuqQPEA)" height="35">&nbsp;
+<img src="https://rocketseat.gupy.io/)" height="32">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<img src="https://media-exp1.licdn.com/dms/image/C4D22AQEM_Ey9bZPF2A/feedshare-shrink_800/0/1648577784510?e=1657152000&v=beta&t=QMkUo0Vw-w9SU0XybCI9QrR3pSznPGtzRor9yuqQPEA)" height="35">&nbsp;
 
 # Meus projetos
 
