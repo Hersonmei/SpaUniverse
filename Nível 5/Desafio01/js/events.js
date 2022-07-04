@@ -15,13 +15,13 @@ import {
     btnPause,
     btnTimeUp,
     btnTimeDown,
-    timer
 } from  "./elements.js"
 
 
 export function Events({
     sounds,
-    theme
+    theme,
+    timer
 }){
     
     btnPanel.forEach(btn => btn.addEventListener('click', () => {
@@ -72,56 +72,23 @@ export function Events({
         theme.darkTheme()
     })
 
-
-
     
     // Events Buttons Play, Pause, TimeUp, TimeDown
-    let minutes = Number(document.querySelector(".minutes").textContent)
-    let seconds = Number(document.querySelector('.seconds').textContent)       
-
-    let timeInterval = 0
 
     btnPlay.addEventListener("click", () => {
-
-        if(!(timer.classList.contains('playActive'))){
-            timeInterval = setInterval(minutesSeconds, 1000)
-            theme.addClassPlay()
-        }
-        
-        function minutesSeconds(){
-            if((seconds == 0 && minutes == 0)){
-                clearInterval(timeInterval)
-                return
-            }
-            
-            if(seconds == 0){
-                minutes = --minutes
-                document.querySelector('.minutes').textContent = String(minutes).padStart(2, 0)
-                seconds = 60
-            } 
-    
-            if (seconds != 0){
-                seconds = --seconds
-                document.querySelector('.seconds').textContent = String(seconds).padStart(2, 0)   
-            }
-        }
+        timer.play()
     })
 
     btnPause.addEventListener("click", () =>{
-        clearInterval(timeInterval)
-        timer.classList.remove('playActive')
+        timer.pause()
     })
     
     btnTimeUp.addEventListener("click", () => {
-        minutes = minutes + 5
-        document.querySelector('.minutes').textContent = String(minutes).padStart(2, 0)
+        timer.timeUp()
     })
     
     btnTimeDown.addEventListener("click", () => {
-        if(minutes >= 5){
-            minutes = minutes - 5
-            document.querySelector('.minutes').textContent = String(minutes).padStart(2, 0)
-        }
+        timer.timeDown()
     })
 }
 

@@ -19,8 +19,9 @@ const btnPause = document.querySelector('.pause')
 const btnTimeUp = document.querySelector('.volumeUp')
 const btnTimeDown = document.querySelector('.volumeDown')
 
-const timer = document.querySelector('.timer')
-
+const timerElements = document.querySelector('.timer')
+let minutesDisplay = document.querySelector(".minutes")
+let secondsDisplay = document.querySelector('.seconds')
 
 export {
     
@@ -41,5 +42,7 @@ export {
     btnPause,
     btnTimeUp,
     btnTimeDown,
-    timer
+    timerElements,
+    minutesDisplay,
+    secondsDisplay
 }

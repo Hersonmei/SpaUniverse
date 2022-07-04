@@ -4,12 +4,14 @@ import {
     body,
     svg,
     btnPanel,
+    timerElements
 } from  "./elements.js"
+
 
 export default function Theme() {
 
     function addClassPlay(){
-        timer.classList.add('playActive')
+        timerElements.classList.add('playActive')
     }
 
     function removeClassActive(){
