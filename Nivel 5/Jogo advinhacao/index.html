@@ -14,28 +14,33 @@
 </head>
 <body>
 
-    <div class="content">
+    <main>
 
         <div class="info">
             <h1>Jogo de Adivinhação</h1>
             <p>Advinhe o número entre 0 e 10</p>
 
             <div class="inputs">
-                <label for="palpite"></label>
-                <input type="number" name="palpite" id="palpite" min="0" max="10" placeholder="0">
-                <input type="button" value="Tentar" id="myBtn">
+                <form>
+                    <label for="palpite"></label>
+                    <input type="number" name="palpite" id="palpite" min="0" max="10">
+                    <input type="button" value="Tentar" id="myBtn">
+                </form>
+                
             </div>
 
             <div class="inputs">
-                <label for="playAgain"></label>
-                <input type="button" value="Jogar Novamente" id="myBtn2">
+                <form >
+                    <label for="playAgain"></label>
+                    <input type="button" value="Jogar Novamente" id="myBtn2">
+                </form>                
             </div>
 
             
         </div>
         
         
-    </div>
+    </main>
     
     <script src="main.js"></script>
 </body>

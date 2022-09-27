@@ -5,7 +5,7 @@
 }
 
 body{
-    background-image: linear-gradient(45deg, #A1C4FD, #C2E9FB);
+    background-image: linear-gradient(107.56deg, #C2E9FB 0%, #A1C4FD 100%);
     font-family: 'DM Sans', sans-serif;
     height: 100vh;
 
@@ -14,10 +14,11 @@ body{
     align-items: center;
 }
 
-.content{
+main{
     background-color: #FFFFFF;
     padding: 48px 64px 64px;
 
+    width: min(428px, 90%);
     text-align: center;
 
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -51,7 +52,7 @@ input[type="number"] {
     color: #34355B;
     background: #DCE2E9;
 
-    width: 55px;
+    width: 70px;
     height: 53px;
 
     margin-right: -4px;
@@ -68,6 +69,7 @@ input[type="button"] {
     height: 53px;
 
     font-weight: 700;
+    cursor: pointer;
 }
 
 input[type="button"]:active{

@@ -1,6 +1,6 @@
 const btn = document.querySelector("#myBtn")
 const btn2 = document.querySelector("#myBtn2")
-const palpite = document.querySelector("#palpite")
+const imputNumber = document.querySelector("#palpite")
 const tagH1 = document.querySelector("h1")
 const paragraph = document.querySelector('p')
 const inputs = document.querySelector('.inputs')
@@ -8,12 +8,13 @@ let number = randomNumber()
 let value
 let countTry = 0
 
-console.log(palpite.style);
+console.log(imputNumber.style);
 
 btn.addEventListener("click", function(e){
     e.preventDefault();
-    value = palpite.value
-
+    value = imputNumber.value
+    
+    
     countTry++
 
     if (value == number){
@@ -22,6 +23,8 @@ btn.addEventListener("click", function(e){
         inputs.style.display = "none"
         btn2.style.display = "block"
     } 
+
+    imputNumber.value = ""
 })
 
 btn2.addEventListener("click", (e) => {
@@ -37,6 +40,7 @@ function reset(){
     paragraph.style.display = "block"
     inputs.style.display = "block"
     btn2.style.display = "none"
+    
 }
 
 function randomNumber(){
