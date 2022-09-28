@@ -1,42 +1,43 @@
-const btn = document.querySelector("#myBtn")
-const btn2 = document.querySelector("#myBtn2")
-const palpite = document.querySelector("#palpite")
-const tagH1 = document.querySelector("h1")
-const paragraph = document.querySelector('p')
-const inputs = document.querySelector('.inputs')
-let number = randomNumber()
-let value
+const btnTry = document.querySelector("#btnTry")
+const btnReset = document.querySelector("#btnReset")
+const screen1 = document.querySelector(".screen1")
+const screen2 = document.querySelector('.screen2')
+let randNumber = randomNumber()
 let countTry = 0
 
-console.log(palpite.style);
+//Eventos
+btnTry.addEventListener("click", handleTryClick)
+btnReset.addEventListener("click", handleResetClick)
+document.addEventListener('keydown', function (e) {
+    if (e.key == 'Enter') {
+      handleResetClick()
+    }
+})
 
-btn.addEventListener("click", function(e){
-    e.preventDefault();
-    value = palpite.value
+//Funções
+function handleTryClick (event){
+    event.preventDefault();
+
+    const inputNumber = document.querySelector("#inputNumber")
 
     countTry++
 
-    if (value == number){
-        tagH1.textContent = `Acertou em ${countTry} tentativa(s)!`
-        paragraph.style.display = "none"
-        inputs.style.display = "none"
-        btn2.style.display = "block"
+    if (inputNumber.value == randNumber){
+        toggleSreen()
+
+        screen2.querySelector('h2').innerText = `Acertou em ${countTry} tentativa(s)!`
     } 
-})
+}
 
-btn2.addEventListener("click", (e) => {
-    e.preventDefault();
-    
-    reset()
-})
+function toggleSreen(){
+    screen1.classList.toggle('hide')
+    screen2.classList.toggle("hide")
+}
 
-function reset(){
+function handleResetClick (e) {
+    toggleSreen()
     countTry = 0
-    number = randomNumber()
-    tagH1.textContent = "Jogo de Adivinhação"
-    paragraph.style.display = "block"
-    inputs.style.display = "block"
-    btn2.style.display = "none"
+    randNumber = randomNumber()
 }
 
 function randomNumber(){
