@@ -21,13 +21,14 @@ const controls = Controls({
   buttonStop
 })
 
+const sound = Sounds()
+
 const timer = Timer({
   minutesDisplay, 
-  secondsDisplay, 
+  secondsDisplay,
+  sound,
   resetControls: controls.reset
 })
-
-const sound = Sounds()
 
 const events = Events({
   buttonPause,
