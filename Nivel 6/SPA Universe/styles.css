@@ -21,3 +21,18 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+nav{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+
+    align-items: center;
+}
+
+nav a{
+    color: var(--nav-color-normal);
+    text-decoration: none;
+    
+    font-size: 24px;
+}
+
