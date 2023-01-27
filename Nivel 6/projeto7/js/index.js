@@ -11,3 +11,5 @@ router.handle() // Esse aqui vai ser para executar logo no começo, se não tive
 
 window.onpopstate = () => router.handle() // Aqui vai permitir que quando volte a página ela mude o conteúdo.
 window.route = () => router.route() // Aqui quando add no módule, não estava funcionado a parte do route(), com isso add ela aqui no window. Poderia colcoar lá no onclick tbm, ficaria windown.route()
+
+console.log(Router.prototype);
