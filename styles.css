@@ -5,8 +5,7 @@
 }
 
 :root{
-    --nav-color-bolt: #FFFFFF;
-    --nav-color-normal: #8D8D99;
+    --nav-color: #FFFFFF;
     --text-color: #E1E1E6;
 }
 
@@ -18,16 +17,18 @@ body{
 
     height: 100vh;
     padding: 40px 72px;
+
     font-family: 'Roboto', sans-serif;
-    
 }
 
 nav{
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 2rem;
 
-    align-items: center;
+    color: var(--nav-color);
+    
 }
 
 nav a{
@@ -36,4 +37,58 @@ nav a{
     
     font-size: 24px;
 }
+
+#page{
+    display: grid;
+
+    color: var(--text-color);
+
+    height: 91vh;
+}
+
+#page .home{
+    place-self: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+#page .others{
+    place-self: start;
+
+    margin-top: 6rem;
+}
+
+main a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--nav-color);
+
+    padding: 12px 32px;
+    border: 2px solid #FFFFFF;
+    border-radius: 5px;
+}
+
+main a:hover{
+  color: #02799D;
+  background: #FFFFFF;
+}
+
+main h1{
+    font-size: 48px;
+}
+
+main p{
+    color: var(--text-color);
+    font-size: 18px;
+    line-height: 160%;
+    text-align: justify;
+
+    width: 650px;
+    margin-top: 1rem;
+}
+
 
