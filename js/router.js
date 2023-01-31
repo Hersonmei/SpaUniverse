@@ -20,8 +20,6 @@ export class Router {
         const {pathname} = window.location
         const route = this.routes[pathname]
 
-        console.log(pathname);
-
         this.changeBg();
 
         fetch(route)
@@ -35,7 +33,7 @@ export class Router {
     changeBg() {
         const { pathname } = window.location;
     
-        const { body } = document;
+        const { body} = document;
     
         switch (pathname) {
           case '/exploracao':
