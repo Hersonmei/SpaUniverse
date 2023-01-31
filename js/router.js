@@ -5,6 +5,8 @@ export class Router {
         this.routes[routeName] = page
     }
 
+    
+
     route(event){
         event = event || window.event
         event.preventDefault()
@@ -15,9 +17,12 @@ export class Router {
     }
 
     handle(){
-        const {pathname, href, host, port} = window.location
+        const {pathname} = window.location
+        const route = this.routes[pathname]
 
-        const route = this.routes[pathname] //Aqui tirei o ou do 404, ver se pode aparecer algum problema.
+        console.log(pathname);
+
+        this.changeBg();
 
         fetch(route)
         .then(data => data.text())
@@ -26,4 +31,29 @@ export class Router {
         })
 
     }
+
+    changeBg() {
+        const { pathname } = window.location;
+    
+        const { body } = document;
+    
+        switch (pathname) {
+          case '/exploracao':
+            body.className = 'explore';
+            break;
+    
+          case '/universo':
+            body.className = 'universe';
+            break;
+    
+          case '/':
+            body.className = 'home';
+            break;
+    
+          default:
+            body.className = '';
+            break;
+        }
+    }
+    
 }
