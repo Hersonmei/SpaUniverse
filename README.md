@@ -1,7 +1,10 @@
-# SPA Universe 
+# SPA Universe 	:rocket:
 
-Desafio para a construção do SPA Universe como parte do Nível 06 do curso Explorer. 
+Desafio para a construção do SPA Universe como parte do Nível 06 do curso Explorer. Foi um projeto desafiador, principalmente para entender o funcionamento das rotas em JS, mas deu para compreender e será um conhecimento útil no futuro.
+
 ## Demonstração
+
+![image](https://user-images.githubusercontent.com/62970936/216043667-401cb31b-4ed1-41b3-ab8c-7ca37df9ea43.png)
 
 Link para conhecer um pouco mais o projeto finalizado:
 
